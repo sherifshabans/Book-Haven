@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "844083012213",
+    "project_id": "book-haven-f58bb",
+    "storage_bucket": "book-haven-f58bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844083012213:android:12e894361047c3ede6ce3c",
+        "android_client_info": {
+          "package_name": "com.elsharif.bookhaven"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsz-iO5uH3O8hrR5dbqUrPXMo96kOpi7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

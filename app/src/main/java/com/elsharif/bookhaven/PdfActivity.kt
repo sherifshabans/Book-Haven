@@ -1,5 +1,6 @@
 package com.elsharif.bookhaven
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
@@ -22,7 +23,7 @@ class PdfActivity : AppCompatActivity() {
 
         binding.apply {
             val bookPdf=intent.getStringExtra("book_pdf").toString()
-            pdfView.fromAsset(bookPdf)
+            pdfView.fromUri(Uri.parse(bookPdf))
                 .swipeHorizontal(true)
                 .enableSwipe(true)
                 .pageSnap(true)

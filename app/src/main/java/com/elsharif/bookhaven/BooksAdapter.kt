@@ -1,17 +1,17 @@
+/*
 package com.elsharif.bookhaven
 
 import android.app.Activity
-import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewbinding.ViewBinding
+import com.elsharif.bookhaven.Models.BooksModel
 import com.elsharif.bookhaven.databinding.ActivityHomeBinding
 
-class BooksAdapter( val list :ArrayList<BooksModel>,val context: Context):
+class BooksAdapter(val list :ArrayList<BooksModel>, val context: Context):
     RecyclerView.Adapter<BooksAdapter.ViewHolder>() {
     class ViewHolder (val binding:  ActivityHomeBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -42,4 +42,4 @@ class BooksAdapter( val list :ArrayList<BooksModel>,val context: Context):
 
 
 
-}
+}*/

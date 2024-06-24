@@ -1,36 +1,83 @@
 package com.elsharif.bookhaven
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
+import com.elsharif.bookhaven.Adapters.HomeAdapter
+import com.elsharif.bookhaven.Models.HomeModel
+import com.elsharif.bookhaven.Repository.MainRepo
 import com.elsharif.bookhaven.databinding.ActivityMainBinding
+import com.elsharif.bookhaven.utlis.MyResponsers
+import com.elsharif.bookhaven.utlis.removeWithAnim
+import com.elsharif.bookhaven.utlis.showWithAnim
+import com.elsharif.bookhaven.viewmodel.MainViewModel
+import com.elsharif.bookhaven.viewmodel.MainViewModelFactory
 
 class MainActivity : AppCompatActivity() {
+
     lateinit var binding: ActivityMainBinding
     val activity= this
-    val list :ArrayList<BooksModel> = ArrayList()
-    val adapter = BooksAdapter(list , activity)
+    val list :ArrayList<HomeModel> = ArrayList()
+    val adapter = HomeAdapter(list , activity)
+    private val TAG ="MainActivity"
+
+    private val repo = MainRepo(activity)
+    private val viewModel by lazy {
+        ViewModelProvider(activity,MainViewModelFactory(repo))[MainViewModel::class.java]
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         binding =ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
         binding.apply {
-            mRecyclerView.adapter= adapter
-            list.add(BooksModel(R.drawable.book_1,"Rich Dad Poor Dad",getString(R.string.description_1),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_2,"Atomic Habits",getString(R.string.description_2),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_3,"Best Self",getString(R.string.description_3),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_4,"How To Be Fine",getString(R.string.description_4),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_5,"Out of the Box",getString(R.string.description_5),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_6,"Stripped",getString(R.string.description_6),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_7,"12 Rules for Life",getString(R.string.description_7),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_8,"Readistan",getString(R.string.description_8),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_9,"Reclaim Your Heart",getString(R.string.description_9),"sample_book.pdf"))
-            list.add(BooksModel(R.drawable.book_10,"Lost Islamic History",getString(R.string.description_10),"sample_book.pdf"))
+            mRvHome.adapter = adapter
+
+            viewModel.getHomeData()
+
+            handleHomeBackend()
+
+            mLayoutError.mTryAgainBtn.setOnClickListener {
+                viewModel.getHomeData()
+            }
+            Log.i(TAG,"handleHomeBackendDatadata: ${viewModel.homeLiveData.value?.data}" )
+            Log.i(TAG,"handleHomeBackendDatadata: ${viewModel.homeLiveData.value?.data}" )
+            Log.i(TAG,"handleHomeBackendDataprogress: ${viewModel.homeLiveData.value?.progress}" )
+
 
         }
 
 
+    }
+
+    private fun handleHomeBackend() {
+        viewModel.homeLiveData.observe(activity){
+            when(it){
+                is MyResponsers.Error -> {
+                    Log.i(TAG,"handleHomeBackend: ${it.errorMessage}" )
+                    binding.mErrorHolder.showWithAnim()
+                    binding.mLoaderHolder.removeWithAnim()
+                }
+                is MyResponsers.Loading -> {
+                    Log.i(TAG,"handleHomeBackend: Loading..." )
+                    binding.mErrorHolder.removeWithAnim()
+                    binding.mLoaderHolder.showWithAnim()
+
+                }
+                is MyResponsers.Success -> {
+                    binding.mErrorHolder.removeWithAnim()
+                    binding.mLoaderHolder.removeWithAnim()
+                    val tempList= it.data
+                    list.clear()
+                    tempList?.forEach {
+                        list.add(it)
+                     //   adapter.notifyItemChanged(list.size)
+                    }
+                    adapter.notifyDataSetChanged()
+                }
+            }
+        }
     }
 }

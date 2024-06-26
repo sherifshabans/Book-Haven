@@ -38,6 +38,7 @@ class DetailsActivity : AppCompatActivity() {
     }
 
     private val TAG = "Details_Activity"
+    @SuppressLint("ObsoleteSdkInt", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailsBinding.inflate(layoutInflater)
@@ -50,6 +51,9 @@ class DetailsActivity : AppCompatActivity() {
                 mAuthorName.text = author
                 mBookDes.text = description
                 mBookImage.loadOnline(image)
+            }
+            mPlayAudio.setOnClickListener {
+
             }
 
             mReadBook.setOnClickListener {
@@ -65,6 +69,7 @@ class DetailsActivity : AppCompatActivity() {
                     android.app.ActionBar.LayoutParams.WRAP_CONTENT
                 )
             }
+
 
             viewModel.downloadLiveData.observe(activity) {
                 when (it) {

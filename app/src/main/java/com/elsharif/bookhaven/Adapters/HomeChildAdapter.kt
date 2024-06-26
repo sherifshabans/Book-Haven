@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
@@ -19,40 +20,26 @@ import com.elsharif.bookhaven.databinding.ItemBookBinding
 import com.elsharif.bookhaven.utlis.loadOnline
 import com.elsharif.bookhaven.utlis.loadOnline2
 
-class HomeChildAdapter(val list :ArrayList<BooksModel>,val context: Context):
-    RecyclerView.Adapter<HomeChildAdapter.ChildViewHolder>()
-{
-    class ChildViewHolder(val binding:ItemBookBinding):RecyclerView.ViewHolder(binding.root){
-        fun bind(model: BooksModel,context: Context){
+class HomeChildAdapter(val list: ArrayList<BooksModel>, val context: Context) :
+    RecyclerView.Adapter<HomeChildAdapter.ChildViewHolder>() {
+
+    class ChildViewHolder(val binding: ItemBookBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(model: BooksModel, context: Context) {
             binding.apply {
-
                 model.apply {
-                    imagebookMain.loadOnline(image)
-                   // imagebook.loadOnline2(image)
-
-
-                    /*
-                    Glide.with(itemView.context)
-                        .load(image)
-                        .transition(DrawableTransitionOptions.withCrossFade())
-                        .thumbnail(0.5f)
-                        .into(imagebook)
-*/
-
-                    Toast.makeText(context,"image Url in Child is :$image", Toast.LENGTH_LONG).show()
-
-                    cardViewBook.setOnClickListener {
+                    imageBookView.loadOnline(image)
+                    cardView.setOnClickListener {
                         Intent().apply {
-                            putExtra("book_model",model)
-                            setClass(context,DetailsActivity::class.java)
-                            val options=ActivityOptions.makeSceneTransitionAnimation(
+                            putExtra("book_model", model)
+                            setClass(context, DetailsActivity::class.java)
+                            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
                                 context as Activity,
-                                cardViewBook,
-                                cardViewBook.transitionName)
+                                cardView,
+                                cardView.transitionName
+                            )
                             context.startActivity(this,options.toBundle())
                         }
                     }
-
                 }
             }
 
@@ -60,15 +47,13 @@ class HomeChildAdapter(val list :ArrayList<BooksModel>,val context: Context):
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChildViewHolder {
-        return  ChildViewHolder(ItemBookBinding.inflate(LayoutInflater.from(context),parent,false))
+        return ChildViewHolder(ItemBookBinding.inflate(LayoutInflater.from(context), parent, false))
     }
 
-    override fun getItemCount(): Int =list.size
+    override fun getItemCount() = list.size
 
     override fun onBindViewHolder(holder: ChildViewHolder, position: Int) {
         val model = list[position]
         holder.bind(model, context)
-
     }
-
 }

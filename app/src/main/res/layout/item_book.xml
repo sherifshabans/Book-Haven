@@ -6,7 +6,7 @@
 
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardViewBook"
+        android:id="@+id/cardView"
         android:layout_width="135dp"
         android:layout_height="210dp"
         android:layout_marginStart="8dp"
@@ -26,11 +26,11 @@
 
 
             <ImageView
-                android:id="@+id/imagebookMain"
+                android:id="@+id/imageBookView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/book_1"
+                app:srcCompat="@drawable/book_1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -44,6 +44,7 @@
                 android:id="@+id/view"
                 android:layout_width="20dp"
                 android:layout_height="wrap_content"
+                android:background="@drawable/book_handle"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

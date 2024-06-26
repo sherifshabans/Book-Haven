@@ -9,13 +9,13 @@ import com.squareup.picasso.Picasso
 import java.net.URL
 import kotlin.time.Duration
 
+
 fun ImageView.loadOnline(imageUrl: String) {
     Glide.with(this.context)
         .load(imageUrl)
         .transition(withCrossFade())
         .thumbnail(0.5f)
         .into(this)
-
 }
 fun ImageView.loadOnline2(imageUrl: String) {
     Picasso.get()

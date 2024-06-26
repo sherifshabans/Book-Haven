@@ -33,6 +33,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.5"
+                app:srcCompat="@drawable/book_4"
 
                 />
 
@@ -63,7 +64,7 @@
         app:layout_constraintTop_toTopOf="@+id/materialCardView" />
 
     <TextView
-        android:id="@+id/mAuthourName"
+        android:id="@+id/mAuthorName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -88,10 +89,10 @@
         android:text="@string/description_4"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/mAuthourName"
+        app:layout_constraintEnd_toEndOf="@+id/mAuthorName"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/mAuthourName"
-        app:layout_constraintTop_toBottomOf="@+id/mAuthourName" />
+        app:layout_constraintStart_toStartOf="@+id/mAuthorName"
+        app:layout_constraintTop_toBottomOf="@+id/mAuthorName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

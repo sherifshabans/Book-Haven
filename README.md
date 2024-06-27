@@ -16,7 +16,7 @@ The "Book Haven App"  for viewing and reading books, and the ability to download
 
 ## Images From The App
 
-![splash](https://github.com/sherifshabans/Book-Haven/blob/main/Images/splash.jpg)
+![splash](https://github.com/sherifshabans/Book-Haven/tree/main/Images/splash.jpg)
 
 **Splash Screen**
 

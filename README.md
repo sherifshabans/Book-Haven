@@ -16,11 +16,11 @@
 
 ## Images From The App
 
-![cover](https://github.com/sherifshabans/Book-Haven/blob/main/images/Cover.jpeg)
+![cover](https://github.com/sherifshabans/Book-Haven/blob/main/images/Cover.png)
 
 **Cover**
 
-![Other Screens](https://github.com/sherifshabans/Book-Haven/blob/main/images/Other Screens.jpeg)
+![Other Screens](https://github.com/sherifshabans/Book-Haven/blob/main/images/Other Screens.png)
 
 **Other Screens**
 

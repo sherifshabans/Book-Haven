@@ -16,39 +16,13 @@
 
 ## Images From The App
 
-![splash](https://github.com/sherifshabans/Book-Haven/blob/main/images/splash.jpeg)
+![cover](https://github.com/sherifshabans/Book-Haven/blob/main/images/Cover.jpeg)
 
-**Splash Screen**
+**Cover**
 
-![home](https://github.com/sherifshabans/Book-Haven/blob/main/images/home.jpeg)
+![Other Screens](https://github.com/sherifshabans/Book-Haven/blob/main/images/Other Screens.jpeg)
 
-**Home**
-
-![details](https://github.com/sherifshabans/Book-Haven/blob/main/images/details.jpeg)
-
-**Details**
-
-![category](https://github.com/sherifshabans/Book-Haven/blob/main/images/category.jpeg)
-
-**Category**
-
-![ads](https://github.com/sherifshabans/Book-Haven/blob/main/images/ads.jpeg)
-
-**Admob**
-
-![pdf1](https://github.com/sherifshabans/Book-Haven/blob/main/images/pdf2.jpeg)
-
-**PDF1**
-
-![pdf2](https://github.com/sherifshabans/Book-Haven/blob/main/images/pdf2.jpeg)
-
-**PDF3**
-
-![pdf3](https://github.com/sherifshabans/Book-Haven/blob/main/images/pdf3.jpeg)
-
-**PDF3**
-
-
+**Other Screens**
 
 
 

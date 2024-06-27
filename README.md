@@ -1,89 +1,53 @@
 **The Movies Info**
 
-*The Movies  app*,  is a dynamic application designed with cutting-edge technologies, including *Jetpack Compose* and *Kotlin*. This project follows to clean code principles, thanks to the clarity and maintainability they bring. The application is built with the *Model-View-ViewModel (MVVM)* design pattern, which promotes a stable and scalable codebase. Additionally, *Dagger Hilt* is used for efficient dependency injection, which improves modularity and testability.
+*The Movies  app*,  is a dynamic application designed with cutting-edge technologies, including *XML* and *Kotlin*. This project follows to clean code principles, thanks to the clarity and maintainability they bring. The application is built with the *Model-View-ViewModel (MVVM)* design pattern, which promotes a stable and scalable codebase.
 
 ## About The App
-With this app you can get information about movies and TV series, watch trailer, search and find the latest, most popular and top rated movies and TV series.
-
+The "Book Haven App"  for viewing and reading books, and the ability to download the book to the mobile and read it as a pdf, and also to mark the reading and the ability to change the mode from night to day and reverse the book suspension station on a specific page with ads within the application.
 ## Key Features
 
-- **Jetpack Compose:** The app leverages *Jetpack Compose*, a modern Android UI toolkit, to create a seamless and interactive user experience.
+- **XML:** The app leverages *XML* (Extensible Markup Language) to define UI layouts and store configuration data, creating a structured and organized user interface.
 - **Kotlin:** Developed entirely in *Kotlin*, the codebase benefits from the conciseness and expressiveness of the language, promoting efficient and readable code.
 - **MVVM Design Pattern:** The application structure is organized following the *MVVM* design pattern, promoting separation of concerns and facilitating maintainability.
-- **Dagger Hilt:** Dependency injection is handled by *Dagger Hilt*, streamlining the management of dependencies and improving the overall architecture.
-- **Retrofit:** Network calls are facilitated by *Retrofit*, enabling seamless communication with remote APIs.
 - **Room:** *Room* is used for local data storage, providing a reliable and efficient way to manage app-related data.
-- **Offline Capability:** This is a first offline app, ensuring users best possible experience even without an active internet connection.
+- **ADMOB:**  a mobile advertising platform, to integrate ads seamlessly and provide a monetization strategy. This ensures a steady revenue stream while maintaining a user-friendly experience.
 
 
-## Acknowledgments
-
-Special thanks to the open-source community for their valuable contributions and support.
-Thanks for https://github.com/ahmed-guedmioui
-and his Great Tutorial :https://github.com/ahmed-guedmioui/The-Movies-Info 
 
 ## Images From The App
 
-![home1](https://github.com/sherifshabans/Movies-App/blob/main/Images/home1.jpg)
+![splash](https://github.com/sherifshabans/Book-Haven/blob/main/Images/splash.jpg)
+
+**Splash Screen**
+
+![home](https://github.com/sherifshabans/Book-Haven/blob/main/Images/home.jpg)
 
 **Home**
 
-![home2](https://github.com/sherifshabans/Movies-App/blob/main/Images/home2.jpg)
+![details](https://github.com/sherifshabans/Book-Haven/blob/main/Images/details.jpg)
 
-**Home**
+**Details**
 
-![home3](https://github.com/sherifshabans/Movies-App/blob/main/Images/home3.jpg)
+![category](https://github.com/sherifshabans/Book-Haven/blob/main/Images/category.jpg)
 
-**Home**
+**Category**
 
+![ads](https://github.com/sherifshabans/Book-Haven/blob/main/Images/ads.jpg)
 
-![trend](https://github.com/sherifshabans/Movies-App/blob/main/Images/trend.jpg)
+**Admob**
 
-**Trending Now**
+![pdf1](https://github.com/sherifshabans/Book-Haven/blob/main/Images/pdf2.jpg)
 
-![tvfromhome](https://github.com/sherifshabans/Movies-App/blob/main/Images/tvfromhome.jpg)
+**PDF1**
 
-**TV Series**
+![pdf2](https://github.com/sherifshabans/Book-Haven/blob/main/Images/pdf2.jpg)
 
-![toprated](https://github.com/sherifshabans/Movies-App/blob/main/Images/toprated.jpg)
+**PDF3**
 
-**Top Rated**
+![pdf3](https://github.com/sherifshabans/Book-Haven/blob/main/Images/pdf3.jpg)
 
-![recommended](https://github.com/sherifshabans/Movies-App/blob/main/Images/recommended.jpg)
+**PDF3**
 
-**Recommended**
-
-![popular](https://github.com/sherifshabans/Movies-App/blob/main/Images/popular.jpg)
-
-**Popular**
-
-![upcoming](https://github.com/sherifshabans/Movies-App/blob/main/Images/upcoming.jpg)
-
-**Upcoming**
-
-![tv](https://github.com/sherifshabans/Movies-App/blob/main/Images/tv.jpg)
-
-**TV**
-
-![search](https://github.com/sherifshabans/Movies-App/blob/main/Images/search.jpg)
-
-**Search**
-
-![search2](https://github.com/sherifshabans/Movies-App/blob/main/Images/search2.jpg)
-
-**Search**
-
-![detail](https://github.com/sherifshabans/Movies-App/blob/main/Images/detail.jpg)
-
-**details**
-
-![detail2](https://github.com/sherifshabans/Movies-App/blob/main/Images/detail2.jpg)
-
-**details**
-
-![similar](https://github.com/sherifshabans/Movies-App/blob/main/Images/similar.jpg)
-
-**Similar**
 
 
 

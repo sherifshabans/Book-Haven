@@ -20,7 +20,7 @@
 
 **Cover**
 
-![Other Screens](https://github.com/sherifshabans/Book-Haven/blob/main/images/Other Screens.png)
+![Other Screens](https://github.com/sherifshabans/Book-Haven/blob/main/images/Other%20Screens.png)
 
 **Other Screens**
 
